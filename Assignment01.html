@@ -1,105 +1,154 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
-<head>
-<title>Assignments</title>
-<style>
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
+  <head>
 
-.navbar {
-  overflow: hidden;
-  background-color: #333;
-}
+    <meta name="author" content="Gregory Bowers">
+    <meta name="keywords" content="HTML, CSS, Javascript, Educational">
+    <meta name="description" content="Educational Test Site for COP4813">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
 
-.navbar a {
-  float: left;
-  font-size: 16px;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
+  <!-- dd menu -->
+  <script>
+    var timer;
 
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
+    $(".parent").on("mouseover", function() {
+      clearTimeout(timer);
+      openSubmenu();
+    }).on("mouseleave", function() {
+      timer = setTimeout(
+        closeSubmenu
+      , 1000);
+    });
 
-.dropdown .dropbtn {
-  font-size: 16px;  
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
-
-.navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: red;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-    </style>
-</head>
+    function openSubmenu() {
+      $(".submenu").addClass("open");
+    }
+    function closeSubmenu() {
+      $(".submenu").removeClass("open");
+    }
+  </script>
+<div class="header">
+      <h1>COP4813 Projects</h1>
+</div>
+  </head>
 <body>
+  <script type="text/javascript">
+    <!--
+    var timeout         = 500;
+    var closetimer		= 0;
+    var ddmenuitem      = 0;
+    
+    // open hidden layer
+    function mopen(id)
+    {	
+      // cancel close timer
+      mcancelclosetime();
+    
+      // close old layer
+      if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+    
+      // get new layer and show it
+      ddmenuitem = document.getElementById(id);
+      ddmenuitem.style.visibility = 'visible';
+    
+    }
+    // close showed layer
+    function mclose()
+    {
+      if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+    }
+    
+    // go close timer
+    function mclosetime()
+    {
+      closetimer = window.setTimeout(mclose, timeout);
+    }
+    
+    // cancel close timer
+    function mcancelclosetime()
+    {
+      if(closetimer)
+      {
+        window.clearTimeout(closetimer);
+        closetimer = null;
+      }
+    }
+    
+    // close layer when click-out
+    document.onclick = mclose; 
+    // -->
+    </script>
+    
+    </head>
+    <body>     
+       
+    <ul id="sddm">
+      <li><a href="#">Home</a>
+        </div>
+      </li>
+      <li><a href="#" onmouseover="mopen('m2')" onmouseout="mclosetime()">Favorite Sites</a>
+        <div id="m2" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+        <a href="https://www.youtube.com">YouTube</a>
+        <a href="https://news.ycombinator.com/news">Hacker News</a>
+        <a href="https://www.udemy.com">Udemy</a>
+        </div>
+      </li>
+      <li><a href="#" onmouseover="mopen('m3')" onmouseout="mclosetime()">Coding Sites</a>
+        <div id="m3" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+        <a href="https://www.w3schools.com">W3Schools</a>
+        <a href="https://www.learncpp.com">Learn C++</a>
+        <a href="https://www.geeksforgeeks.org/beautifulsoup-installation-python/">BS4</a>
+        </div>
+      </li>
+      <li><a href="#" onmouseover="mopen('m4')" onmouseout="mclosetime()">Assignments</a>
+        <div id="m4" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+        <a href="#">Assignment 1</a>
+        <a href="#">Assignment 2</a>
+        <a href="#">Assignment 3</a>
+        <a href="#">Assignment 4</a>
+        <a href="#">Assignment 5</a>
+        <a href="#">Assignment 6</a>
+        <a href="#">Assignment 7</a>
+        <a href="#">Assignment 8</a>
+        <a href="#">Assignment 9</a>
+        <a href="#">Assignment 10</a>
+        <a href="#">Assignment 11</a>
+        <a href="#">Assignment 12</a>
+        <a href="#">Assignment 13</a>
+        <a href="#">Assignment 14</a>
+        <a href="#">Assignment 15</a>
+        </div>
+      </li>
+    </ul>
+    <div style="clear:both"></div>
+    
+    <div style="clear:both"></div>
+    </body> 
 
-<h1>COP4813 Website - Gregory Bowers</h1>
-<div class="navbar">
-    <a href="#home">Home</a>
-    <a href="#fav">Favorite Sites</a>
-    <a href="#tech">Programming/IT Sites</a>
-    <div class="dropdown">
-    <button class="dropbtn">Assignments</button>
-    <div class="dropdown-content">
-        <a href="Assignment01.html">Assignment 1</a>
-        <a href="Assignment02.html">Assignment 2</a>
-        <a href="Assignment03.html">Assignment 3</a>
-        <a href="Assignment04.html">Assignment 4</a>
-        <a href="Assignment05.html">Assignment 5</a>
-        <a href="Assignment06.html">Assignment 6</a>
-        <a href="Assignment07.html">Assignment 7</a>
-        <a href="Assignment08.html">Assignment 8</a>
-        <a href="Assignment09.html">Assignment 9</a>
-        <a href="Assignment10.html">Assignment 10</a>
-        <a href="Assignment11.html">Assignment 11</a>
-        <a href="Assignment12.html">Assignment 12</a>
-        <a href="Assignment13.html">Assignment 13</a>
-        <a href="Assignment14.html">Assignment 14</a>
-        <a href="Assignment15.html">Assignment 15</a>
+  
+  <div class="row">
+    <div class="main">
+      <h2>About this site</h2>
+      <h5>This site is hosted using Microsoft Azure</h5>
+      <div class="fakeimg" style="height:2px;"></div>
+      <p>COP4813 Web Systems</p>
+      <p>This site is built using clean and simple code with an aim towards speed and accessibility on all devices and platforms.</p>
+      <p>Here you may find various technical projects and useful links to other sites that are relevant to how this site was built - plus a little extra. </p>
+      <br>
+      <h2>What to expect here?</h2>
+      <h5>Updates to come...</h5>
+      <div class="fakeimg" style="height:2px;"></div>
+
+      <p>Weekly Assignments</p>
+      <p>Every week this website will be bolstered with new HTML, CSS, and Javascript projects. </p>
+      <p>Images are from Microsoft. This site is for educational use.</p>
     </div>
-</div>
-</div>
-
-
-
-
-</body>
-<h2>Hello World!</h2>
+  </div>
+  
+  <div class="footer">
+    <h2>Gregory Bowers 2023</h2>
+  </div>
+<img src="htmlicon.png" alt="HTML Icon" width="30">
+<img src="cssicon.png" alt="CSS Icon" width="30">
+  </body>
 </html>

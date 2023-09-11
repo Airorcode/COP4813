@@ -1,0 +1,117 @@
+ul {
+    display:inline-block;
+    width:100%;
+    height:100%;
+    max-width:2000px;
+    background:#ffffff;
+    text-align:center;
+    padding:0px;
+}
+
+#sddm li
+{	
+    display:inline-block;
+    background: white;
+    height:20px;
+	list-style: none;
+	font: bold 15px arial}
+
+#sddm li a
+{	display: block;
+    padding: 10px;
+	width: 140px;
+    border-radius: 8px;
+	background: #dbedff;
+	color: #171717;
+	text-align: center;
+	text-decoration: none}
+
+#sddm li a:hover
+{	background: #ededed}
+
+#sddm div
+{	position: absolute;
+	visibility: hidden;
+    border-radius: 8px;
+	margin: 0;
+	padding: 0;
+	background: #dbedff;
+	border: 0px solid #ededed}
+          
+          /* Style the body */
+          body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+          }
+          .content {
+            max-width: 400px;
+            margin: auto;
+            background: white;
+            padding: 10px;
+          }
+          
+          /* Header/logo Title */
+          .header {
+            padding: 50px;
+            text-align: center;
+            background: #ffffff;
+            color: rgb(1, 1, 1);
+          }
+          
+          /* Increase the font size of the heading */
+          .header h1 {
+            max-width: 1200px;
+            margin: auto;
+            padding: 10px;
+
+
+          }
+          
+          
+          /* Column container */
+          .row {  
+            display: -ms-flexbox; /* IE10 */
+            display: flex;
+            -ms-flex-wrap: wrap; /* IE10 */
+            flex-wrap: wrap;
+          }
+          
+          /*++++ Main column++++ */
+          .main {   
+            max-width: 1200px;
+            margin: auto;
+            background: #f6fafe;
+            padding: 15px;
+            border-radius: 8px;
+
+            
+          }
+          
+          /* Fake image, just for this example */
+          .fakeimg {
+            width: 100%;
+            padding: 2px;
+          }
+          
+          /* Footer */
+          .footer {
+            padding: 20px;
+            text-align: center;
+            font-size: 12px;
+
+          }
+          
+          /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+          @media screen and (max-width: 700px) {
+            .row {   
+              flex-direction: column;
+            }
+          }
+          
+          /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+          @media screen and (max-width: 400px) {
+            .navbar a {
+              float: none;
+              width: 100%;
+            }
+          }
